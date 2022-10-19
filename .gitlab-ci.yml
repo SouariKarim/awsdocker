@@ -29,8 +29,8 @@ docker-deploy-image:
     - docker:dind
   script:
     - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin # (5)
-    - docker build -t karimdockerimage .
-    - docker push karimdockerimage
+    - docker build -t karimsouari101/awsdocker .
+    - docker push karimsouari101/awsdocker
 
 aws-deploy:
   image: 'python:latest'
